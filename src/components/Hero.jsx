@@ -312,27 +312,28 @@ export default function Hero({ profile }) {
 
           .hero-editorial-layout {
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: center;
             align-items: center;
-            padding-bottom: 54px;
-            min-height: calc(100vh - 90px);
+            padding-top: 10px;
+            padding-bottom: 50px;
+            min-height: calc(100vh - 100px);
             position: relative;
+            gap: 0;
           }
 
-          /* Portrait on Mobile: Clean Upper Center Placement */
+          /* Portrait on Mobile: Natural flex flow, perfectly framed */
           .hero-portrait-wrap {
-            position: absolute;
-            top: 2%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 86vw;
-            max-width: 360px;
-            height: 58vh;
-            max-height: 460px;
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            width: clamp(240px, 74vw, 330px);
+            height: clamp(320px, 45vh, 410px);
+            margin: 0 auto;
             z-index: 2;
           }
 
-          /* Mobile Bottom Block: Subtitle + Stacked Name (Upar Niche) */
+          /* Mobile Bottom Block: Snug fit right below portrait */
           .hero-mobile-block {
             position: relative;
             z-index: 6;
@@ -342,14 +343,14 @@ export default function Hero({ profile }) {
             align-items: center;
             text-align: center;
             padding: 0 16px;
-            margin-top: auto;
+            margin-top: -26px; /* Seamless overlap with the soft-faded portrait base */
           }
 
           .hero-mobile-block .hero-role-subtitle {
             font-size: clamp(0.72rem, 3.2vw, 0.88rem);
             letter-spacing: 1.5px;
             color: #E6CB82;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             white-space: normal;
             text-align: center;
             max-width: 90%;
@@ -386,13 +387,16 @@ export default function Hero({ profile }) {
         /* Small Phones (< 380px) */
         @media (max-width: 380px) {
           .hero-portrait-wrap {
-            height: 52vh;
-            max-height: 400px;
+            height: clamp(270px, 40vh, 330px);
+            width: clamp(210px, 68vw, 270px);
+          }
+          .hero-mobile-block {
+            margin-top: -20px;
           }
           .hero-mobile-title-stacked .hero-monu-title,
           .hero-mobile-title-stacked .hero-brand-title {
-            font-size: 2.4rem;
-            letter-spacing: 3px;
+            font-size: 2.3rem;
+            letter-spacing: 2px;
           }
         }
       `}</style>

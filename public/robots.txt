@@ -3,5 +3,6 @@ Allow: /
 
 # Sitemap
 Sitemap: https://deepakkumar7388.github.io/Monu-Brand/sitemap.xml
+Sitemap: https://deepakkumar7388.github.io/Monu-Brand/sitemap.txt
 
 
