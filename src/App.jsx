@@ -1,16 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { profileData } from './data/profileData';
 import GoldParticles from './components/GoldParticles';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Brotherhood from './components/Brotherhood';
-import Hometown from './components/Hometown';
-import Activities from './components/Activities';
-import LifestyleGallery from './components/LifestyleGallery';
-import Legacy from './components/Legacy';
-import Footer from './components/Footer';
-import LightboxModal from './components/LightboxModal';
+
+// Lazy-loaded sections — only downloaded when user scrolls near them
+const Brotherhood = lazy(() => import('./components/Brotherhood'));
+const Hometown = lazy(() => import('./components/Hometown'));
+const Activities = lazy(() => import('./components/Activities'));
+const LifestyleGallery = lazy(() => import('./components/LifestyleGallery'));
+const Legacy = lazy(() => import('./components/Legacy'));
+const Footer = lazy(() => import('./components/Footer'));
+const LightboxModal = lazy(() => import('./components/LightboxModal'));
+
+// Minimal gold shimmer while lazy sections are loading
+const SectionLoader = () => (
+  <div style={{
+    minHeight: '200px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: '#080808',
+    color: 'rgba(201, 166, 75, 0.5)',
+    fontFamily: "'Cinzel', serif",
+    fontSize: '0.75rem',
+    letterSpacing: '3px',
+    textTransform: 'uppercase'
+  }}>
+    ✦
+  </div>
+);
 
 function App() {
   const [lightboxState, setLightboxState] = useState({
@@ -62,42 +82,56 @@ function App() {
         <About profile={profileData} />
 
         {/* Brotherhood — Yaaron Ka Yaar */}
-        <Brotherhood
-          profile={profileData}
-          onOpenLightbox={handleOpenLightbox}
-        />
+        <Suspense fallback={<SectionLoader />}>
+          <Brotherhood
+            profile={profileData}
+            onOpenLightbox={handleOpenLightbox}
+          />
+        </Suspense>
 
         {/* Hometown & Heritage — Apni Mitti */}
-        <Hometown profile={profileData} />
+        <Suspense fallback={<SectionLoader />}>
+          <Hometown profile={profileData} />
+        </Suspense>
 
         {/* Community & Leadership — Logon Ke Beech */}
-        <Activities
-          profile={profileData}
-          onOpenLightbox={handleOpenLightbox}
-        />
+        <Suspense fallback={<SectionLoader />}>
+          <Activities
+            profile={profileData}
+            onOpenLightbox={handleOpenLightbox}
+          />
+        </Suspense>
 
         {/* Lifestyle & Moments Gallery */}
-        <LifestyleGallery
-          profile={profileData}
-          onOpenLightbox={handleOpenLightbox}
-        />
+        <Suspense fallback={<SectionLoader />}>
+          <LifestyleGallery
+            profile={profileData}
+            onOpenLightbox={handleOpenLightbox}
+          />
+        </Suspense>
 
         {/* Final Dramatic Closing — The Legacy & Direct Contact */}
-        <Legacy profile={profileData} />
+        <Suspense fallback={<SectionLoader />}>
+          <Legacy profile={profileData} />
+        </Suspense>
       </main>
 
       {/* Luxury Monogram Footer */}
-      <Footer profile={profileData} />
+      <Suspense fallback={<SectionLoader />}>
+        <Footer profile={profileData} />
+      </Suspense>
 
       {/* Global Full-screen Lightbox Modal */}
-      <LightboxModal
-        isOpen={lightboxState.isOpen}
-        images={lightboxState.images}
-        currentIndex={lightboxState.currentIndex}
-        onClose={handleCloseLightbox}
-        onNext={handleNextImage}
-        onPrev={handlePrevImage}
-      />
+      <Suspense fallback={null}>
+        <LightboxModal
+          isOpen={lightboxState.isOpen}
+          images={lightboxState.images}
+          currentIndex={lightboxState.currentIndex}
+          onClose={handleCloseLightbox}
+          onNext={handleNextImage}
+          onPrev={handlePrevImage}
+        />
+      </Suspense>
     </div>
   );
 }

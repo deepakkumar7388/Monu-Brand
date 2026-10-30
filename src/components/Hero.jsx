@@ -73,6 +73,9 @@ export default function Hero({ profile }) {
               src={profile.personal.avatar || "/images/img-2.webp"}
               alt={profile.personal.fullName}
               className="hero-portrait-img"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
             {/* Seamless Edge Blending Vignette */}
             <div className="hero-portrait-vignette" />

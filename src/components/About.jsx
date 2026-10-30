@@ -89,6 +89,8 @@ export default function About({ profile }) {
                 <img
                   src={profile.personal.aboutPortrait}
                   alt={`${profile.personal.name} Haveli Portrait`}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: '100%',
                     height: '100%',
