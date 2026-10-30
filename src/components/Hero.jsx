@@ -333,7 +333,7 @@ export default function Hero({ profile }) {
             z-index: 2;
           }
 
-          /* Mobile Bottom Block: Snug fit right below portrait */
+          /* Mobile Bottom Block: Placed cleanly below portrait without covering the photo */
           .hero-mobile-block {
             position: relative;
             z-index: 6;
@@ -343,7 +343,7 @@ export default function Hero({ profile }) {
             align-items: center;
             text-align: center;
             padding: 0 16px;
-            margin-top: -26px; /* Seamless overlap with the soft-faded portrait base */
+            margin-top: 10px; /* Clean breathing room below the photo */
           }
 
           .hero-mobile-block .hero-role-subtitle {
@@ -391,7 +391,7 @@ export default function Hero({ profile }) {
             width: clamp(210px, 68vw, 270px);
           }
           .hero-mobile-block {
-            margin-top: -20px;
+            margin-top: 8px;
           }
           .hero-mobile-title-stacked .hero-monu-title,
           .hero-mobile-title-stacked .hero-brand-title {
