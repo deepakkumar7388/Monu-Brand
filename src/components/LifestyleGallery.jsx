@@ -129,7 +129,8 @@ export default function LifestyleGallery({ profile, onOpenLightbox }) {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    objectPosition: item.objectPosition || 'center top',
+                    objectPosition: item.objectPosition || 'center center',
+                    filter: item.filter || 'none',
                     display: 'block',
                     transition: 'transform 0.7s ease'
                   }}

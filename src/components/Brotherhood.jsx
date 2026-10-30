@@ -92,7 +92,8 @@ export default function Brotherhood({ profile, onOpenLightbox }) {
                       width: '100%',
                       height: '100%',
                       objectFit: 'cover',
-                      objectPosition: item.objectPosition || 'center top',
+                      objectPosition: item.objectPosition || 'center center',
+                      filter: item.filter || 'none',
                       display: 'block',
                       transition: 'transform 0.65s cubic-bezier(0.16, 1, 0.3, 1)'
                     }}
@@ -100,12 +101,12 @@ export default function Brotherhood({ profile, onOpenLightbox }) {
                     onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
                   />
 
-                  {/* Dark Gradient Vignette */}
+                  {/* Soft Cinematic Vignette */}
                   <div
                     style={{
                       position: 'absolute',
                       inset: 0,
-                      background: 'linear-gradient(to top, rgba(8,8,8,0.92) 0%, rgba(8,8,8,0.2) 60%, transparent 100%)',
+                      background: 'linear-gradient(to top, rgba(8,8,8,0.35) 0%, transparent 40%)',
                       pointerEvents: 'none'
                     }}
                   />

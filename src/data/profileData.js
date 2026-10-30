@@ -118,6 +118,8 @@ export const profileData = {
         title: "Night Baithak",
         occasion: "True Companionship",
         image: img("img-11.webp"),
+        objectPosition: "center 52%",
+        filter: "brightness(1.15) contrast(1.08)",
         caption: "Raat ki mehfil, sachhi baatein aur hamesha ka sath.",
         tag: "Daily Ritual",
         year: "2025"
@@ -271,6 +273,8 @@ export const profileData = {
         title: "Midnight Backlight",
         category: "Brotherhood",
         image: img("img-11.webp"),
+        objectPosition: "center 52%",
+        filter: "brightness(1.15) contrast(1.08)",
         caption: "Loyal brothers under the glow."
       },
       {
