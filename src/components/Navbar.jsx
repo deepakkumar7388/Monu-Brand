@@ -220,7 +220,7 @@ export default function Navbar({ profile }) {
           {/* Right Action: WhatsApp Connect */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/9151552421"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm-flex"
@@ -361,7 +361,7 @@ export default function Navbar({ profile }) {
               }}
             >
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/9151552421"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold-primary"

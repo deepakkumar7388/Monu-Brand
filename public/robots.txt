@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://monubrand.com/sitemap.xml
+Sitemap: https://deepakkumar7388.github.io/Monu-Brand/sitemap.xml
+
 

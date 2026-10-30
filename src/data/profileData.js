@@ -3,6 +3,18 @@
  * Categorized, compressed, and optimized real images.
  */
 
+/**
+ * Dynamically resolves asset paths with Vite's BASE_URL.
+ * Ensures images resolve correctly on GitHub Pages (/Monu-Brand/), custom domains (/), and local dev.
+ */
+export const getAssetUrl = (relativePath) => {
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanPath = relativePath.startsWith('/') ? relativePath.slice(1) : relativePath;
+  return base.endsWith('/') ? `${base}${cleanPath}` : `${base}/${cleanPath}`;
+};
+
+const img = (filename) => getAssetUrl(`images/${filename}`);
+
 export const profileData = {
   personal: {
     name: "MONU BRAND",
@@ -32,10 +44,10 @@ export const profileData = {
       { hi: "द्रमंडगंज", en: "Drummondganj" },
       { hi: "गौहानी", en: "Gauhani" }
     ],
-    avatar: "/images/img-2.webp",
-    aboutPortrait: "/images/img-21.webp",
-    lifestyleHero: "/images/img-3.webp",
-    festivePortrait: "/images/img-17.webp",
+    avatar: img("img-2.webp"),
+    aboutPortrait: img("img-21.webp"),
+    lifestyleHero: img("img-3.webp"),
+    festivePortrait: img("img-17.webp"),
   },
 
   stats: [
@@ -87,7 +99,7 @@ export const profileData = {
         id: "b1",
         title: "The Main Squad & Kafila",
         occasion: "Convoy on Country Roads",
-        image: "/images/img-14.webp",
+        image: img("img-14.webp"),
         caption: "Bhaiyon ka kafila — jab sab sath hain toh har raah aasan hai.",
         tag: "Squad Kafila",
         year: "2025"
@@ -96,7 +108,7 @@ export const profileData = {
         id: "b2",
         title: "Twilight Riders",
         occasion: "Dusk Ride Convoy",
-        image: "/images/img-20.webp",
+        image: img("img-20.webp"),
         caption: "Dhalti sham aur yaaron ki bike patrol — UP-70 squad.",
         tag: "Bikes Squad",
         year: "2025"
@@ -105,7 +117,7 @@ export const profileData = {
         id: "b3",
         title: "Night Baithak",
         occasion: "True Companionship",
-        image: "/images/img-11.webp",
+        image: img("img-11.webp"),
         caption: "Raat ki mehfil, sachhi baatein aur hamesha ka sath.",
         tag: "Daily Ritual",
         year: "2025"
@@ -114,7 +126,7 @@ export const profileData = {
         id: "b4",
         title: "Celebration Night",
         occasion: "Festive Function",
-        image: "/images/img-17.webp",
+        image: img("img-17.webp"),
         caption: "Pandal me poora kafila sath — har khushi apno ke sang.",
         tag: "Festive",
         year: "2024"
@@ -126,7 +138,7 @@ export const profileData = {
     subtitle: "APNI MITTI & ILAAKA",
     title: "Pandeypur Se Drummondganj Tak — Monu Brand",
     description: "Pandeypur, Beri, Salaiya, Barhula, Kenwar, Kathari, Lakshmanpur, Koraon, Baraundha, Drummondganj aur Gauhani.",
-    coverImage: "/images/img-18.webp",
+    coverImage: img("img-18.webp"),
     details: [
       { label: "Belt", value: "Pandeypur to Drummondganj" },
       { label: "District", value: "Prayagraj - Mirzapur Belt" },
@@ -145,7 +157,7 @@ export const profileData = {
         category: "Community",
         title: "Buzurgon Ka Samman",
         desc: "Gaon-choupal me buzurgon ki salah aur har faisle me apno ke sath khade rehna.",
-        image: "/images/img-9.webp",
+        image: img("img-9.webp"),
         stats: "Apno Ka Sath",
         badge: "Social Service"
       },
@@ -154,7 +166,7 @@ export const profileData = {
         category: "Sports & Rides",
         title: "Desi Sports & MT-15",
         desc: "Yuva shakti, dangal aur biking ride ko aage badhana.",
-        image: "/images/img-3.webp",
+        image: img("img-3.webp"),
         stats: "Yuva Josh",
         badge: "Sports & Fitness"
       },
@@ -163,7 +175,7 @@ export const profileData = {
         category: "Culture",
         title: "Tyohar & Parampara",
         desc: "Mela, langar aur sanskritic tyohar sabke sath milkar manana.",
-        image: "/images/img-13.webp",
+        image: img("img-13.webp"),
         stats: "Shaan & Parampara",
         badge: "Heritage"
       },
@@ -172,7 +184,7 @@ export const profileData = {
         category: "Brotherhood",
         title: "Yuva Margdarshan",
         desc: "Apne ilaaqe ke yuvaon ka sath aur unhe har mod par support karna.",
-        image: "/images/img-10.webp",
+        image: img("img-10.webp"),
         stats: "Yaari Zindabad",
         badge: "Brotherhood"
       }
@@ -188,168 +200,168 @@ export const profileData = {
         id: "g1",
         title: "Open Road Ride",
         category: ["Rides & Swag", "Roots & Nature"],
-        image: "/images/img-1.webp",
+        image: img("img-1.webp"),
         caption: "UP-70 rider stance in rural horizons."
       },
       {
         id: "g2",
         title: "Midnight Boston",
         category: "Portraits",
-        image: "/images/img-2.webp",
+        image: img("img-2.webp"),
         caption: "Midnight portrait with royal smile."
       },
       {
         id: "g3",
         title: "MT-15 Beast",
         category: "Rides & Swag",
-        image: "/images/img-3.webp",
+        image: img("img-3.webp"),
         caption: "Field trails with the purple MT-15."
       },
       {
         id: "g4",
         title: "Classic Checkered",
         category: "Portraits",
-        image: "/images/img-4.webp",
+        image: img("img-4.webp"),
         caption: "Sharp shades and effortless swagger."
       },
       {
         id: "g5",
         title: "Stairway Stance",
         category: "Portraits",
-        image: "/images/img-5.webp",
+        image: img("img-5.webp"),
         caption: "Cool and composed in striped drip."
       },
       {
         id: "g6",
         title: "Desi Baithak",
         category: "Portraits",
-        image: "/images/img-6.webp",
+        image: img("img-6.webp"),
         caption: "Grounded roots, pure authenticity."
       },
       {
         id: "g7",
         title: "Connected Life",
         category: "Portraits",
-        image: "/images/img-7.webp",
+        image: img("img-7.webp"),
         caption: "Modern vibe, staying connected."
       },
       {
         id: "g8",
         title: "Pillar of Confidence",
         category: "Portraits",
-        image: "/images/img-8.webp",
+        image: img("img-8.webp"),
         caption: "Poised and ready for every challenge."
       },
       {
         id: "g9",
         title: "Yaaron Ki Mehfil",
         category: "Brotherhood",
-        image: "/images/img-9.webp",
+        image: img("img-9.webp"),
         caption: "Brotherhood united at celebration night."
       },
       {
         id: "g10",
         title: "Field Talks",
         category: ["Brotherhood", "Rides & Swag"],
-        image: "/images/img-10.webp",
+        image: img("img-10.webp"),
         caption: "Laughter and brotherhood by the ride."
       },
       {
         id: "g11",
         title: "Midnight Backlight",
         category: "Brotherhood",
-        image: "/images/img-11.webp",
+        image: img("img-11.webp"),
         caption: "Loyal brothers under the glow."
       },
       {
         id: "g12",
         title: "Regal White",
         category: "Portraits",
-        image: "/images/img-12.webp",
+        image: img("img-12.webp"),
         caption: "Classic comfort, royal charisma."
       },
       {
         id: "g13",
         title: "Wedding Smiles",
         category: "Brotherhood",
-        image: "/images/img-13.webp",
+        image: img("img-13.webp"),
         caption: "Celebrating festive moments together."
       },
       {
         id: "g14",
         title: "Main Squad Convoy",
         category: ["Brotherhood", "Rides & Swag"],
-        image: "/images/img-14.webp",
+        image: img("img-14.webp"),
         caption: "The entire circle ready on rustic paths."
       },
       {
         id: "g15",
         title: "Grove Ride",
         category: ["Rides & Swag", "Roots & Nature"],
-        image: "/images/img-15.webp",
+        image: img("img-15.webp"),
         caption: "Country trails under the mango canopy."
       },
       {
         id: "g16",
         title: "Waterfront Cruise",
         category: "Rides & Swag",
-        image: "/images/img-16.webp",
+        image: img("img-16.webp"),
         caption: "Breeze by the lakeside waters."
       },
       {
         id: "g17",
         title: "Pandal Celebrations",
         category: "Brotherhood",
-        image: "/images/img-17.webp",
+        image: img("img-17.webp"),
         caption: "Gathering of true brothers and friends."
       },
       {
         id: "g18",
         title: "Dosti Panorama",
         category: ["Brotherhood", "Roots & Nature"],
-        image: "/images/img-18.webp",
+        image: img("img-18.webp"),
         caption: "30+ brothers lined up with pride."
       },
       {
         id: "g19",
         title: "Terrace Greens",
         category: ["Roots & Nature", "Brotherhood"],
-        image: "/images/img-19.webp",
+        image: img("img-19.webp"),
         caption: "Overlooking ancestral green fields."
       },
       {
         id: "g20",
         title: "Twilight Riders",
         category: ["Brotherhood", "Rides & Swag"],
-        image: "/images/img-20.webp",
+        image: img("img-20.webp"),
         caption: "Bikes lined up under twilight skies."
       },
       {
         id: "g21",
         title: "Golden Rim-Light",
         category: "Portraits",
-        image: "/images/img-21.webp",
+        image: img("img-21.webp"),
         caption: "Editorial profile in cinematic light."
       },
       {
         id: "g22",
         title: "Banquet Brotherhood",
         category: "Brotherhood",
-        image: "/images/img-22.webp",
+        image: img("img-22.webp"),
         caption: "Warm winter evening celebrations."
       },
       {
         id: "g23",
         title: "River Stream Rocks",
         category: ["Roots & Nature", "Portraits"],
-        image: "/images/img-23.webp",
+        image: img("img-23.webp"),
         caption: "Standing strong in flowing mountain waters."
       },
       {
         id: "g24",
         title: "Courtyard Stance",
         category: "Portraits",
-        image: "/images/img-24.webp",
+        image: img("img-24.webp"),
         caption: "Monu Brand — stylish, grounded, original."
       }
     ]

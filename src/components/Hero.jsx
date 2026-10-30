@@ -70,7 +70,7 @@ export default function Hero({ profile }) {
           {/* Central Portrait: High-Resolution Masked Portrait */}
           <div className="hero-portrait-wrap">
             <img
-              src={profile.personal.avatar || "/images/img-2.webp"}
+              src={profile.personal.avatar}
               alt={profile.personal.fullName}
               className="hero-portrait-img"
               loading="eager"
