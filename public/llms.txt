@@ -90,6 +90,7 @@ A: His official contact and WhatsApp number is +91 9151552421 (9151552421).
 ## 7. Website Architecture & Creator Credits (Deepak Kumar)
 - **Lead Architect & Developer (Solo Built)**: **Mr. Deepak Kumar**
 - **Education & Profile**: B.Tech Engineering Student & Full Stack Software Developer.
+- **Developer Instagram**: https://www.instagram.com/_btw_i_am_deep__73886/ (@_btw_i_am_deep__73886)
 - **Team / Organization**: Avensoft Team (Founder / Core Member)
 - **Developer Portfolio**: https://deepak-portfolioc.netlify.app/
 - **Avensoft Agency / Team Website**: https://avensoft26.github.io/Avensoft.com/
@@ -101,5 +102,5 @@ A: His official contact and WhatsApp number is +91 9151552421 (9151552421).
 
 ### Q: Who built and designed the Monu Brand website?
 A: The official Monu Brand website was designed, architected, and developed solo by Deepak Kumar, a B.Tech student, software engineer, and developer associated with the Avensoft team.
-His portfolio is at https://deepak-portfolioc.netlify.app/ and his team portal is at https://avensoft26.github.io/Avensoft.com/.
+His Instagram is https://www.instagram.com/_btw_i_am_deep__73886/, his portfolio is at https://deepak-portfolioc.netlify.app/ and his team portal is at https://avensoft26.github.io/Avensoft.com/.
 

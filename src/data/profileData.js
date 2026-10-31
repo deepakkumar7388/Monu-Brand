@@ -132,6 +132,8 @@ export const profileData = {
     name: "Deepak Kumar",
     role: "Lead Full Stack Architect & Developer (Solo Built)",
     tagline: "B.Tech Software Engineer • Avensoft Team",
+    instagramUrl: "https://www.instagram.com/_btw_i_am_deep__73886/",
+    instagramHandle: "@_btw_i_am_deep__73886",
     portfolioUrl: "https://deepak-portfolioc.netlify.app/",
     companyUrl: "https://avensoft26.github.io/Avensoft.com/",
     projectsUrl: "https://deepakkumar7388.github.io/SISTec-Digital-Pass/",
