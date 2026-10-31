@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Crown, Heart } from 'lucide-react';
+import { ArrowUp, Crown, Heart, Code2, ExternalLink } from 'lucide-react';
 
 export default function Footer({ profile }) {
   const scrollToTop = () => {
@@ -130,6 +130,127 @@ export default function Footer({ profile }) {
             <ArrowUp size={14} />
           </button>
         </div>
+
+        {/* Lead Architect & Developer Credit Card (Built Solo by Deepak Kumar) */}
+        {profile.developer && (
+          <div
+            style={{
+              margin: '0 auto 35px',
+              maxWidth: '720px',
+              background: 'linear-gradient(135deg, rgba(25, 20, 14, 0.85), rgba(12, 12, 12, 0.95))',
+              border: '1px solid rgba(201, 166, 75, 0.35)',
+              borderRadius: '12px',
+              padding: '18px 24px',
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '16px',
+              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.6)'
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+              <div
+                style={{
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '10px',
+                  background: 'rgba(201, 166, 75, 0.15)',
+                  border: '1px solid rgba(201, 166, 75, 0.4)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#F5D77F'
+                }}
+              >
+                <Code2 size={20} />
+              </div>
+              <div style={{ textAlign: 'left' }}>
+                <div
+                  style={{
+                    fontFamily: "'Cinzel', serif",
+                    fontSize: '0.72rem',
+                    letterSpacing: '1.5px',
+                    color: '#C9A64B',
+                    textTransform: 'uppercase'
+                  }}
+                >
+                  Architected &amp; Built Solo By
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Playfair Display', serif",
+                    fontSize: '1.15rem',
+                    fontWeight: 700,
+                    color: '#F5F0E6'
+                  }}
+                >
+                  {profile.developer.name}{' '}
+                  <span
+                    style={{
+                      fontSize: '0.8rem',
+                      fontFamily: "'Inter', sans-serif",
+                      color: '#8C8270',
+                      fontWeight: 400
+                    }}
+                  >
+                    • {profile.developer.tagline}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+              <a
+                href={profile.developer.portfolioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '5px',
+                  padding: '7px 14px',
+                  borderRadius: '20px',
+                  background: 'rgba(201, 166, 75, 0.15)',
+                  border: '1px solid rgba(201, 166, 75, 0.4)',
+                  color: '#F5D77F',
+                  fontSize: '0.76rem',
+                  fontFamily: "'Inter', sans-serif",
+                  fontWeight: 500,
+                  textDecoration: 'none',
+                  transition: 'all 0.25s ease'
+                }}
+              >
+                <span>Portfolio</span>
+                <ExternalLink size={12} />
+              </a>
+
+              <a
+                href={profile.developer.companyUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '5px',
+                  padding: '7px 14px',
+                  borderRadius: '20px',
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  color: '#E6E0D4',
+                  fontSize: '0.76rem',
+                  fontFamily: "'Inter', sans-serif",
+                  fontWeight: 500,
+                  textDecoration: 'none',
+                  transition: 'all 0.25s ease'
+                }}
+              >
+                <span>Avensoft</span>
+                <ExternalLink size={12} />
+              </a>
+            </div>
+          </div>
+        )}
 
         {/* Bottom Credits & Copyright */}
         <div

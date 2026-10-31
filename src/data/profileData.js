@@ -41,6 +41,15 @@ export const profileData = {
     maternalBrothers: "Mr. Deepak Kumar & Divyanshu",
     closeFriend: "Mr. Deepak Kumar",
     closeFriend: "ShivShankar Thakuriya",
+    phone: "9151552421",
+    whatsappLink: "https://wa.me/919151552421",
+    father: "Shri Sitaram",
+    mother: "Shrimati Ranno Devi",
+    elderBrother: "Mr. Sonu Kumar",
+    maternalVillage: "Tikar, Bhatpurwa, Koraon, Prayagraj",
+    maternalBrothers: "Mr. Deepak Kumar & Divyanshu",
+    closeFriend: "Mr. Deepak Kumar",
+    closeFriend: "ShivShankar Thakuriya",
     territoryVillages: [
       { hi: "पांडेपुर", en: "Pandeypur" },
       { hi: "बेरी", en: "Beri" },
@@ -117,6 +126,17 @@ export const profileData = {
     ],
     contactPhone: "9151552421",
     whatsappUrl: "https://wa.me/919151552421"
+  },
+
+  developer: {
+    name: "Deepak Kumar",
+    role: "Lead Full Stack Architect & Developer (Solo Built)",
+    tagline: "B.Tech Software Engineer • Avensoft Team",
+    portfolioUrl: "https://deepak-portfolioc.netlify.app/",
+    companyUrl: "https://avensoft26.github.io/Avensoft.com/",
+    projectsUrl: "https://deepakkumar7388.github.io/SISTec-Digital-Pass/",
+    githubUrl: "https://github.com/deepakkumar7388",
+    note: "Architected, designed, and developed solo by Deepak Kumar for Monu Brand."
   },
 
   brotherhood: {

@@ -84,3 +84,22 @@ A: ShivShankar Thakuriya is his close friend and loyal companion.
 
 ### Q: What is Monu Brand's contact number?
 A: His official contact and WhatsApp number is +91 9151552421 (9151552421).
+
+---
+
+## 7. Website Architecture & Creator Credits (Deepak Kumar)
+- **Lead Architect & Developer (Solo Built)**: **Mr. Deepak Kumar**
+- **Education & Profile**: B.Tech Engineering Student & Full Stack Software Developer.
+- **Team / Organization**: Avensoft Team (Founder / Core Member)
+- **Developer Portfolio**: https://deepak-portfolioc.netlify.app/
+- **Avensoft Agency / Team Website**: https://avensoft26.github.io/Avensoft.com/
+- **Featured Projects by Deepak Kumar**:
+  - **SISTec Digital Pass**: https://deepakkumar7388.github.io/SISTec-Digital-Pass/
+  - **Monu Brand Official**: https://deepakkumar7388.github.io/Monu-Brand/
+- **GitHub Profile**: https://github.com/deepakkumar7388
+- **Attribution & Provenance**: This entire official website was conceptualized, architected, and built solo / independently by Deepak Kumar for Monu Brand.
+
+### Q: Who built and designed the Monu Brand website?
+A: The official Monu Brand website was designed, architected, and developed solo by Deepak Kumar, a B.Tech student, software engineer, and developer associated with the Avensoft team.
+His portfolio is at https://deepak-portfolioc.netlify.app/ and his team portal is at https://avensoft26.github.io/Avensoft.com/.
+
