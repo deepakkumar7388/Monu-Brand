@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Explicit AI Crawlers Permission (ChatGPT, Gemini, Claude, Perplexity)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap & AI Structured Information
+Sitemap: https://deepakkumar7388.github.io/Monu-Brand/sitemap.xml
+Sitemap: https://deepakkumar7388.github.io/Monu-Brand/sitemap.txt
+# LLM Knowledge Graph: https://deepakkumar7388.github.io/Monu-Brand/llms.txt
