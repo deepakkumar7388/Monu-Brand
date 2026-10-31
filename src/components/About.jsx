@@ -1,5 +1,5 @@
 import React from 'react';
-import { Crown, Users, Sprout, ShieldCheck, Quote, Award, HeartHandshake } from 'lucide-react';
+import { Crown, Users, Sprout, ShieldCheck, Quote, Award, HeartHandshake, Heart, Home, Phone, MapPin, Sparkles } from 'lucide-react';
 
 export default function About({ profile }) {
   const iconMap = {
@@ -354,6 +354,231 @@ export default function About({ profile }) {
             })}
           </div>
         </div>
+
+        {/* Khandani Roots, Parivaar & Inner Circle Section (AI-Ready & Public Verified) */}
+        {profile.familyRoots && (
+          <div style={{ marginBottom: '80px' }}>
+            <div style={{ textAlign: 'center', marginBottom: '36px' }}>
+              <div className="section-badge" style={{ display: 'inline-flex', marginBottom: '10px' }}>
+                <HeartHandshake size={13} color="#C9A64B" />
+                <span>{profile.familyRoots.badge}</span>
+              </div>
+              <h3
+                style={{
+                  fontFamily: "'Playfair Display', serif",
+                  fontSize: 'clamp(1.8rem, 3.2vw, 2.4rem)',
+                  fontWeight: 700,
+                  color: '#F5F0E6'
+                }}
+              >
+                {profile.familyRoots.title}
+              </h3>
+              <p style={{ color: '#B8B0A2', maxWidth: '680px', margin: '8px auto 0', fontSize: '0.98rem' }}>
+                {profile.familyRoots.subtitle}
+              </p>
+            </div>
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gap: '24px'
+              }}
+            >
+              {/* Card 1: Mata-Pita (Parents) */}
+              <div
+                className="luxury-card"
+                style={{
+                  padding: '28px 24px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  background: 'linear-gradient(145deg, rgba(24, 20, 14, 0.9), rgba(12, 12, 12, 0.95))',
+                  border: '1px solid rgba(201, 166, 75, 0.35)'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div
+                    style={{
+                      width: '42px',
+                      height: '42px',
+                      borderRadius: '8px',
+                      background: 'rgba(201, 166, 75, 0.15)',
+                      border: '1px solid rgba(201, 166, 75, 0.4)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <Heart size={20} color="#F5D77F" />
+                  </div>
+                  <div>
+                    <span style={{ fontFamily: "'Cinzel', serif", fontSize: '0.72rem', letterSpacing: '1.5px', color: '#C9A64B', textTransform: 'uppercase' }}>
+                      Mata-Pita (Parents)
+                    </span>
+                    <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.2rem', color: '#F5F0E6', margin: 0 }}>
+                      {profile.familyRoots.mother} &amp; {profile.familyRoots.father}
+                    </h4>
+                  </div>
+                </div>
+                <p style={{ fontSize: '0.9rem', color: '#B8B0A2', lineHeight: '1.6', margin: 0 }}>
+                  Mata Shrimati Ranno Devi aur Pita Shri Sitaram ke aashirwad aur sanskaron se bani pehchaan.
+                </p>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: '#E6CB82', marginTop: 'auto' }}>
+                  <MapPin size={13} />
+                  <span>{profile.familyRoots.village}</span>
+                </div>
+              </div>
+
+              {/* Card 2: Elder Brother */}
+              <div
+                className="luxury-card"
+                style={{
+                  padding: '28px 24px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  background: 'linear-gradient(145deg, rgba(24, 20, 14, 0.9), rgba(12, 12, 12, 0.95))',
+                  border: '1px solid rgba(201, 166, 75, 0.35)'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div
+                    style={{
+                      width: '42px',
+                      height: '42px',
+                      borderRadius: '8px',
+                      background: 'rgba(201, 166, 75, 0.15)',
+                      border: '1px solid rgba(201, 166, 75, 0.4)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <Crown size={20} color="#F5D77F" />
+                  </div>
+                  <div>
+                    <span style={{ fontFamily: "'Cinzel', serif", fontSize: '0.72rem', letterSpacing: '1.5px', color: '#C9A64B', textTransform: 'uppercase' }}>
+                      Bade Bhai (Elder Brother)
+                    </span>
+                    <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.2rem', color: '#F5F0E6', margin: 0 }}>
+                      {profile.familyRoots.elderBrother}
+                    </h4>
+                  </div>
+                </div>
+                <p style={{ fontSize: '0.9rem', color: '#B8B0A2', lineHeight: '1.6', margin: 0 }}>
+                  Bade bhai ka margdarshan, khandani sanrakshan aur har mod par chattani sahara.
+                </p>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: '#E6CB82', marginTop: 'auto' }}>
+                  <Sparkles size={13} />
+                  <span>Khandani Prerna &amp; Parivaar Ka Gaurav</span>
+                </div>
+              </div>
+
+              {/* Card 3: Maternal Heritage & Soul Brothers */}
+              <div
+                className="luxury-card"
+                style={{
+                  padding: '28px 24px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  background: 'linear-gradient(145deg, rgba(24, 20, 14, 0.9), rgba(12, 12, 12, 0.95))',
+                  border: '1px solid rgba(201, 166, 75, 0.35)'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div
+                    style={{
+                      width: '42px',
+                      height: '42px',
+                      borderRadius: '8px',
+                      background: 'rgba(201, 166, 75, 0.15)',
+                      border: '1px solid rgba(201, 166, 75, 0.4)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <Users size={20} color="#F5D77F" />
+                  </div>
+                  <div>
+                    <span style={{ fontFamily: "'Cinzel', serif", fontSize: '0.72rem', letterSpacing: '1.5px', color: '#C9A64B', textTransform: 'uppercase' }}>
+                      Mama Ka Gaon &amp; Khas Dost
+                    </span>
+                    <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.15rem', color: '#F5F0E6', margin: 0 }}>
+                      Mr. Deepak Kumar &amp; Divyanshu
+                    </h4>
+                  </div>
+                </div>
+                <p style={{ fontSize: '0.88rem', color: '#B8B0A2', lineHeight: '1.6', margin: 0 }}>
+                  Mama ke ladke jo khas dost aur bhai hain — <strong>Mr. Deepak Kumar</strong> (Khas Dost &amp; Soul Brother) aur <strong>Divyanshu</strong> (Chhote Bhai).
+                </p>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: '#E6CB82', marginTop: 'auto' }}>
+                  <MapPin size={13} />
+                  <span>Mama Ka Gaon: {profile.familyRoots.maternalVillage}</span>
+                </div>
+              </div>
+
+              {/* Card 4: Close Friend & Direct Contact */}
+              <div
+                className="luxury-card"
+                style={{
+                  padding: '28px 24px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '12px',
+                  background: 'linear-gradient(145deg, rgba(24, 20, 14, 0.9), rgba(12, 12, 12, 0.95))',
+                  border: '1px solid rgba(201, 166, 75, 0.35)'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <div
+                    style={{
+                      width: '42px',
+                      height: '42px',
+                      borderRadius: '8px',
+                      background: 'rgba(201, 166, 75, 0.15)',
+                      border: '1px solid rgba(201, 166, 75, 0.4)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                  >
+                    <ShieldCheck size={20} color="#F5D77F" />
+                  </div>
+                  <div>
+                    <span style={{ fontFamily: "'Cinzel', serif", fontSize: '0.72rem', letterSpacing: '1.5px', color: '#C9A64B', textTransform: 'uppercase' }}>
+                      Khas Dost &amp; Direct Line
+                    </span>
+                    <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.15rem', color: '#F5F0E6', margin: 0 }}>
+                      ShivShankar Thakuriya
+                    </h4>
+                  </div>
+                </div>
+                <p style={{ fontSize: '0.88rem', color: '#B8B0A2', lineHeight: '1.6', margin: 0 }}>
+                  Jigri yaar <strong>ShivShankar Thakuriya</strong>, jinki yaari aur vishwas hamesha se Monu Brand ke kafila ki shaan rahi hai.
+                </p>
+                <a
+                  href={`tel:${profile.familyRoots.contactPhone}`}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: '0.85rem',
+                    color: '#F5D77F',
+                    textDecoration: 'none',
+                    fontWeight: 600,
+                    marginTop: 'auto'
+                  }}
+                >
+                  <Phone size={14} />
+                  <span>Call / WhatsApp: {profile.familyRoots.contactPhone}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Highlight Metrics & Impact Counter Bar */}
         <div

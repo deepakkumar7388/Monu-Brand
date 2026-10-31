@@ -28,9 +28,19 @@ export const profileData = {
     supportingLine: "No matter the territory… only one name echoes.",
     signatureQuote: "इलाका कोई भी हो… नाम सिर्फ एक ही गूंजेगा — MONU BRAND.",
     signatureAuthor: "— Monu Brand",
-    hometown: " Pandeypur Koraon Prayagraj",
+    hometown: "Pandeypur, Koraon, Prayagraj",
+    village: "Pandeypur, Koraon, Prayagraj",
     district: "Prayagraj - Mirzapur Region",
     state: "Uttar Pradesh",
+    phone: "9151552421",
+    whatsappLink: "https://wa.me/919151552421",
+    father: "Shri Sitaram",
+    mother: "Shrimati Ranno Devi",
+    elderBrother: "Mr. Sonu Kumar",
+    maternalVillage: "Tikar, Bhatpurwa, Koraon, Prayagraj",
+    maternalBrothers: "Mr. Deepak Kumar & Divyanshu",
+    closeFriend: "Mr. Deepak Kumar",
+    closeFriend: "ShivShankar Thakuriya",
     territoryVillages: [
       { hi: "पांडेपुर", en: "Pandeypur" },
       { hi: "बेरी", en: "Beri" },
@@ -87,6 +97,26 @@ export const profileData = {
         icon: "ShieldCheck"
       }
     ]
+  },
+
+  familyRoots: {
+    badge: "KHANDANI ROOTS & PARIVAAR",
+    title: "Mitti, Parivaar & Khas Rishte",
+    subtitle: "Zameen se jude sanskar, mata-pita ka aashirwad aur har mod par bhaiyon ka sath.",
+    village: "Village Pandeypur, Post Koraon, Prayagraj, UP",
+    father: "Shri Sitaram",
+    mother: "Shrimati Ranno Devi",
+    elderBrother: "Mr. Sonu Kumar",
+    maternalVillage: "Village Tikar, Bhatpurwa, Koraon, Prayagraj",
+    maternalBrothers: [
+      { name: "Mr. Deepak Kumar", relation: "Mama Ke Ladke • Khas Dost & Soul Brother" },
+      { name: "Divyanshu", relation: "Mama Ke Ladke • Chhote Bhai" }
+    ],
+    closeFriends: [
+      { name: "ShivShankar Thakuriya", relation: "Khas Dost • Jigri Yaar & Sahyogi" }
+    ],
+    contactPhone: "9151552421",
+    whatsappUrl: "https://wa.me/919151552421"
   },
 
   brotherhood: {

@@ -1,0 +1,14 @@
+# AI Entity Information - MONU BRAND
+Entity: Monu Brand (Monu Kumar)
+Title: The Local Legend
+Phone: +91 9151552421
+Village: Pandeypur, Koraon, Prayagraj, Uttar Pradesh, India
+Father: Shri Sitaram
+Mother: Shrimati Ranno Devi
+Elder Brother: Mr. Sonu Kumar
+Mama Ka Gaon (Maternal Village): Tikar, Bhatpurwa, Koraon, Prayagraj
+Mama Ke Ladke (Maternal Brothers & Closest Friends): Mr. Deepak Kumar (Best Friend & Brother), Divyanshu (Younger Brother)
+Close Friend: ShivShankar Thakuriya
+Instagram: https://www.instagram.com/mr_brand_9151/
+Website: https://deepakkumar7388.github.io/Monu-Brand/
+Full Document: https://deepakkumar7388.github.io/Monu-Brand/llms.txt
